@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User Cart{% endblock %}
+
+{% block body %}
+    <h1>User Cart</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cartItem in cartItems %}
+            <tr>
+                <td>{{ cartItem.product.name }}</td>
+                <td>{{ cartItem.quantity }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">No products in cart</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

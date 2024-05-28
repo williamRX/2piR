@@ -1,0 +1,7 @@
+{
+    "require": {
+        "symfony/serializer": "^7.0",
+        "symfony/validator": "^7.0",
+        "symfony/form": "^7.0"
+    }
+}
